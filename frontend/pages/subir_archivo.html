@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/subir_archivo.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <title>Subir Archivo Excel</title>
+</head>
+<body>
+    <header>
+        <img src="../img/logoPe.jpg" alt="logotipo" width="100" id="logo">
+        <h1>Puntos Estilo</h1>
+    </header><br><br>
+    <div class="formulario">
+    <p>Nota: Sube aqui el archivo en excel para hacer la distribución de puntos y el envio de los correos</p>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".xlsx">
+        <button type="submit">Subir Archivo</button>
+    </form><br><br>
+    </div>
+    <footer class="footer-section">
+        <h2>Información de Contacto</h2>
+        <ol>
+            <li>Dirección: Calle Falsa 123</li>
+            <li>Teléfono: 555-555-555</li>
+            <li>Email: contacto@example.com</li>
+        </ol>
+    </footer>
+</body>
+</html>

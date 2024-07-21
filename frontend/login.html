@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <title>Iniciar Sesión</title>
+</head>
+<body>
+    <header>
+        <img src="img/logoPe.jpg" alt="logotipo" width="100" id="logo">
+        <h1>Puntos Estilo</h1>
+    </header>
+    
+    <div class="container">
+        <form id="login-form">
+            <h2>Iniciar Sesión</h2>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Iniciar Sesión</button>
+
+            <p>No tienes Cuenta?</p><a href="registro.html">Registrate Aquí</a>
+        </form>
+    </div>
+
+    <footer class="footer-section">
+        <h2>Información de Contacto</h2>
+        <ol>
+            <li>Dirección: Calle Falsa 123</li>
+            <li>Teléfono: 555-555-555</li>
+            <li>Email: contacto@example.com</li>
+        </ol>
+    </footer>
+    
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const correo = document.getElementById('correo').value;
+            const password = document.getElementById('password').value;
+
+            // Obtener datos almacenados del usuario desde localStorage
+            const storedData = JSON.parse(localStorage.getItem('userData'));
+            console.log('Datos almacenados:', storedData);
+
+            // Verificar credenciales
+            if (storedData && storedData.correo === correo && storedData.password === password) {
+                // Guardar datos del usuario en localStorage
+                localStorage.setItem('user', JSON.stringify(storedData));
+
+                // Guardar estado de sesión iniciada en localStorage
+                localStorage.setItem('isLoggedIn', 'true');
+                console.log('Login exitoso, redirigiendo a dashboard.html');
+
+                // Redirigir a la página de dashboard
+                alert('Login exitoso');
+                window.location.href = 'dashboard.html';
+            } else {
+                alert('Correo o contraseña incorrectos');
+                console.log('Correo o contraseña incorrectos');
+            }
+        });
+    </script>
+</body>
+</html>

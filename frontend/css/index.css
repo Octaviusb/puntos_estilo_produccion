@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("/img/fondo.png");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header div span {
+    margin-right: 20px;
+}
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+main {
+    padding: 20px;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+.admin-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.admin-item {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.admin-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.admin-item a:hover {
+    color: #4CAF50;
+}
+
+  /* Footer */
+  .footer-section {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: left;
+    justify-items: auto;
+  }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="./css/perfil.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img src="img/logoPe.jpg" alt="logotipo" width="100" id="logo">
+        <h1>Puntos Estilo</h1>
+        <div>
+            <?php if (isset($_SESSION['user']) && $_SESSION['user'] !== null): ?>
+                <span>Usuario: <?php echo htmlspecialchars($_SESSION['user']['nombre']); ?></span>
+                <a href="logout.php">Cerrar Sesión</a>
+            <?php endif; ?>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>¡Hola! 👋</h2>
+                <p>Hoy sumas:</p>
+                <p class="points">0 pts</p>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html">Inicio</a></li>
+                <li><a href="mis-consumos.html">Mis consumos</a></li>
+                <li><a href="mis-bonos.html">Mis bonos</a></li>
+                <li><a href="mis-referidos.html">Mis referidos</a></li>
+                <li><a href="retos.html">Retos</a></li>
+                <li><a href="frontend/pages/catalogo.html">Catálogo</a></li>
+                <li><a href="aliados.html">Aliados</a></li>
+                <li><a href="mapas.html">Mapas</a></li>
+                <li><a href="mis_datos.html">Mis datos</a></li>
+                <li><a href="logout.php">Cerrar Sesión</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="status-cards">
+                <div class="card">
+                    <h3>Última acumulación</h3>
+                    <p>Aún no has ganado puntos<br>Por cada compra en nuestras estaciones ganas puntos.</p>
+                </div>
+                <div class="card">
+                    <h3>Última redención</h3>
+                    <p>Aún no registramos redención<br>Te invitamos a canjear tus puntos en nuestro catálogo.</p>
+                </div>
+            </div>
+            <section class="benefits">
+                <h2>Vive tus puntos disfrutando de estos beneficios <a href="#">Ver todos</a></h2>
+                <div class="benefits-cards">
+                    <div class="benefit-card">
+                        <img src="images/perro.jpg" alt="Perro Altoque">
+                        <p>Perro Altoque</p>
+                        <p class="points">1,450 puntos</p>
+                    </div>
+                    <div class="benefit-card">
+                        <img src="images/bono-5000.jpg" alt="Bono Combustible">
+                        <p>Bono Combustible por $5.000</p>
+                        <p class="points">1,500 puntos</p>
+                    </div>
+                    <div class="benefit-card">
+                        <img src="images/bono-1000.jpg" alt="Bono Combustible">
+                        <p>Bono Combustible por $1.000</p>
+                        <p class="points">300 puntos</p>
+                    </div>
+                    <div class="benefit-card">
+                        <img src="images/bono-10000.jpg" alt="Bono Combustible">
+                        <p>Bono Combustible por $10.000</p>
+                        <p class="points">3,000 puntos</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer-section">
+        <h2>Información de Contacto</h2>
+        <ol>
+            <li>Dirección: Calle Falsa 123</li>
+            <li>Teléfono: 555-555-555</li>
+            <li>Email: contacto@example.com</li>
+        </ol>
+        <!--<button><a href="index.php">Volver al Login</a></button>-->
+    </footer>
+    
+    <!--<script src="scripts.js"></script>-->
+</body>
+</html>

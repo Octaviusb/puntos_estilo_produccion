@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <script>
+        if (!isLoggedIn()) {
+            window.location.href = 'login.html';
+        }
+        function isLoggedIn() {
+            // Lógica para verificar si el usuario está logueado
+            return /* true o false */;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="img/logoPe.jpg" alt="logotipo" width="100" id="logo">
+        <h1>Puntos Estilo</h1>
+        <div>
+            <span>Usuario: <?php echo htmlspecialchars($user['nombre']); ?></span>
+            <a href="logout.php">Cerrar Sesión</a>
+        </div>
+    </header>
+    
+    <section id="dashboard">
+        <h2>Panel de Control</h2>
+        <div class="summary">
+            <div class="summary-item">
+                <a href="administracion.html">
+                    <p>Panel de Administración</p>
+                </a>
+            </div>
+        <div class="summary-item">
+                <a href="perfil.html">
+                    <p>Perfil Usuarios</p>
+                    
+                </a>
+            </div>            
+        <div class="summary-item">
+                <a href="/frontend/pages/catalogo.html">
+                    <p>Catálogo</p>
+                    
+                </a>
+            </div>
+        <div class="summary-item">
+                <a href="contacto.html">
+                    <p>Contactenos</p>
+                    
+                </a>
+            </div>
+        <div class="summary-item">
+                <a href="cambiar.html">
+                    <p>Cambiar</p>
+                    
+                </a>
+            </div>
+        <div class="summary-item">
+                <a href="contacto.html">
+                    <p>Contactenos</p>
+                    
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Información de Contacto</h2>
+        <ul>
+            <li>Dirección: Calle Falsa 123</li>
+            <li>Teléfono: 555-555-555</li>
+            <li>Email: contacto@example.com</li>
+        </ul>
+    </footer>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const user = localStorage.getItem('user');
+        if (user) {
+            document.getElementById('user-name').innerText = user;
+        } else {
+            window.location.href = "login.html";
+        }
+
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('user');
+        });
+    });
+    </script>
+</body>
+</html>
+

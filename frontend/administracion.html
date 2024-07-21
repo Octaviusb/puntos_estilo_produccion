@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img src="img/logoPe.jpg" alt="logotipo" width="100" id="logo">
+        <h1>Puntos Estilo</h1>
+        <div>
+            <!--<?php if (isset($_SESSION['user']) && $_SESSION['user'] !== null): ?>
+                <span>Usuario: <?php echo htmlspecialchars($_SESSION['user']['nombre']); ?></span>
+                <a href="/logout.php">Cerrar Sesión</a>
+            <?php else: ?>
+                <span>Usuario no identificado</span>
+            <?php endif; ?>-->
+        </div>
+    </header>
+    
+    <section id="administracion">
+        <h2>Administración</h2>
+        <div class="admin-links">
+            <div class="admin-item">
+                <a href="pages/cargar_puntos.html">
+                    <p>Cargar Puntos</p>
+                </a>
+            </div>
+            <div class="admin-item">
+                <a href="pages/descontar_puntos.html">
+                    <p>Descontar Puntos</p>
+                </a>
+            </div>
+            <div class="admin-item">
+                <a href="pages/catalogo.html">
+                    <p>Catálogo</p>
+                </a>
+            </div>
+            <div class="admin-item">
+                <a href="pages/entrega.html">
+                    <p>Entrega o distribución</p>
+                </a>
+            </div>
+            <div class="admin-item">
+                <a href="pages/impacto.html">
+                    <p>Medir Impacto</p>
+                </a>
+            </div>
+            <div class="admin-item">
+                <a href="pages/reportes.html">
+                    <p>Reportes</p>
+                </a>
+            </div>
+            <div class="admin-item">
+                <a href="pages/solicitudes.html">
+                    <p>Solicitudes y Autorizaciones</p>
+                </a>
+            </div>
+            <div class="admin-item">
+                <a href="perfil.html">
+                    <p>Perfil</p>
+                </a>
+            </div>
+            <div class="admin-item">
+                <a href="pages/subir_archivo.html">
+                    <p>Cargar Archivo Asignación</p>
+                </a>
+            </div>
+            <div class="admin-item">
+                <a href="dashboard.html">
+                    <p>volver a dashboard</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			//var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+    <footer class="footer-section">
+        <h2>Información de Contacto</h2>
+        <ol>
+            <li>Dirección: Calle Falsa 123</li>
+            <li>Teléfono: 555-555-555</li>
+            <li>Email: contacto@example.com</li>
+        </ol>
+        <!--<button><a href="index.php">Volver al Login</a></button>-->
+    </footer>
+</body>
+</html>

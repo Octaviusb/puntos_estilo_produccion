@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puntos Perfil</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900">
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body>
+  <div class="relative flex flex-col min-h-screen bg-slate-50 overflow-x-hidden" style="font-family: Inter, 'Noto Sans', sans-serif;">
+    <div class="layout-container flex flex-col h-full grow">
+      <header class="flex items-center justify-between border-b border-[#e7edf3] px-10 py-3 bg-[#4CAF50]">
+        <div class="flex items-center gap-4 text-[#0e141b]">
+          <img src="img/logoPe.jpg" alt="logotipo" width="100" id="logo">
+          <h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Puntos Estilo</h2>
+        </div>
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-9">
+            <a class="text-sm font-medium leading-normal" href="index.html">Inicio</a>
+            <a class="text-sm font-medium leading-normal" href="mis_datos.html">Mis Datos</a>
+            <a class="text-sm font-medium leading-normal" href="/frontend/pages/catalogo.html">Catálogo</a>
+            <a class="text-sm font-medium leading-normal" href="contacto.html">Contáctenos</a>
+          </div>
+        </div>
+      </header>
+      <div class="flex flex-1 justify-center py-5 px-40">
+        <div class="layout-content-container flex flex-col flex-1 max-w-[960px]">
+          <div class="flex flex-wrap justify-between gap-3 p-4">
+            <p class="text-[#0e141b] text-[32px] font-bold leading-tight min-w-72">Tus Puntos</p>
+          </div>
+          <h3 class="text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Total puntos</h3>
+          <div class="flex flex-wrap gap-3 px-4 py-3">
+            <div class="flex flex-col items-center text-center gap-2 min-w-[111px] flex-1 p-3 border rounded-lg border-[#d0dbe7]">
+              <p class="text-2xl font-bold leading-tight">1,000</p>
+              <p class="text-sm font-normal leading-normal text-[#4e7097]">Disponibles</p>
+            </div>
+            <div class="flex flex-col items-center text-center gap-2 min-w-[111px] flex-1 p-3 border rounded-lg border-[#d0dbe7]">
+              <p class="text-2xl font-bold leading-tight">2,000</p>
+              <p class="text-sm font-normal leading-normal text-[#4e7097]">Pendientes</p>
+            </div>
+            <div class="flex flex-col items-center text-center gap-2 min-w-[111px] flex-1 p-3 border rounded-lg border-[#d0dbe7]">
+              <p class="text-2xl font-bold leading-tight">3,000</p>
+              <p class="text-sm font-normal leading-normal text-[#4e7097]">Vencidos</p>
+            </div>
+          </div>
+          <h3 class="text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Actividades que generan puntos</h3>
+          <div class="flex gap-4 bg-slate-50 px-4 py-3 justify-between">
+            <div class="flex items-start gap-4">
+              <div class="flex items-center justify-center rounded-lg bg-[#e7edf3] text-[#0e141b] shrink-0 size-12" data-icon="Gift" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M216,72H180.92c.39-.33.79-.65,1.17-1A29.53,29.53,0,0,0,192,49.57,32.62,32.62,0,0,0,158.44,16,29.53,29.53,0,0,0,137,25.91a54.94,54.94,0,0,0-9,14.48,54.94,54.94,0,0,0-9-14.48A29.53,29.53,0,0,0,97.56,16,32.62,32.62,0,0,0,64,49.57A29.53,29.53,0,0,0,73.91,71c.38.33.78.65,1.17,1H40A16,16,0,0,0,24,88v32a16,16,0,0,0,16,16v64a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V136a16,16,0,0,0,16-16V88A16,16,0,0,0,216,72ZM149,36.51a13.69,13.69,0,0,1,10-4.5h.49A16.62,16.62,0,0,1,176,49.08a13.69,13.69,0,0,1-4.5,10c-9.49,8.4-25.24,11.36-35,12.4C137.7,60.89,141,45.5,149,36.51Zm-64.09.36A16.63,16.63,0,0,1,96.59,32h.49a13.69,13.69,0,0,1,10,4.5c8.39,9.48,11.35,25.2,12.39,34.92-9.73-1-25.48-4-35-12.4A13.7,13.7,0,0,1,84.91,36.87ZM40,88H108v32H40Zm16,48H108v64H56Zm144,64H148V136h52Zm16-80H148V88h68Z"></path>
+                </svg>
+              </div>
+              <div class="flex flex-col gap-0.5">
+                <p class="text-[17px] font-bold leading-tight">Beneficio 1</p>
+                <p class="text-sm font-normal leading-normal text-[#4e7097]">Recibirás 100 puntos al completar esta actividad.</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <p class="text-sm font-normal leading-normal text-[#4e7097]">100 Puntos</p>
+            </div>
+          </div>
+          <div class="flex gap-4 bg-slate-50 px-4 py-3 justify-between">
+            <div class="flex items-start gap-4">
+              <div class="flex items-center justify-center rounded-lg bg-[#e7edf3] text-[#0e141b] shrink-0 size-12" data-icon="Gift" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M216,72H180.92c.39-.33.79-.65,1.17-1A29.53,29.53,0,0,0,192,49.57,32.62,32.62,0,0,0,158.44,16,29.53,29.53,0,0,0,137,25.91a54.94,54.94,0,0,0-9,14.48,54.94,54.94,0,0,0-9-14.48A29.53,29.53,0,0,0,97.56,16,32.62,32.62,0,0,0,64,49.57A29.53,29.53,0,0,0,73.91,71c.38.33.78.65,1.17,1H40A16,16,0,0,0,24,88v32a16,16,0,0,0,16,16v64a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V136a16,16,0,0,0,16-16V88A16,16,0,0,0,216,72ZM149,36.51a13.69,13.69,0,0,1,10-4.5h.49A16.62,16.62,0,0,1,176,49.08a13.69,13.69,0,0,1-4.5,10c-9.49,8.4-25.24,11.36-35,12.4C137.7,60.89,141,45.5,149,36.51Zm-64.09.36A16.63,16.63,0,0,1,96.59,32h.49a13.69,13.69,0,0,1,10,4.5c8.39,9.48,11.35,25.2,12.39,34.92-9.73-1-25.48-4-35-12.4A13.7,13.7,0,0,1,84.91,36.87ZM40,88H108v32H40Zm16,48H108v64H56Zm144,64H148V136h52Zm16-80H148V88h68Z"></path>
+                </svg>
+              </div>
+              <div class="flex flex-col gap-0.5">
+                <p class="text-[17px] font-bold leading-tight">Beneficio 2</p>
+                <p class="text-sm font-normal leading-normal text-[#4e7097]">Recibirás 200 puntos al completar esta actividad.</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <p class="text-sm font-normal leading-normal text-[#4e7097]">200 Puntos</p>
+            </div>
+          </div>
+          <div class="flex gap-4 bg-slate-50 px-4 py-3 justify-between">
+            <div class="flex items-start gap-4">
+              <div class="flex items-center justify-center rounded-lg bg-[#e7edf3] text-[#0e141b] shrink-0 size-12" data-icon="Gift" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M216,72H180.92c.39-.33.79-.65,1.17-1A29.53,29.53,0,0,0,192,49.57,32.62,32.62,0,0,0,158.44,16,29.53,29.53,0,0,0,137,25.91a54.94,54.94,0,0,0-9,14.48,54.94,54.94,0,0,0-9-14.48A29.53,29.53,0,0,0,97.56,16,32.62,32.62,0,0,0,64,49.57A29.53,29.53,0,0,0,73.91,71c.38.33.78.65,1.17,1H40A16,16,0,0,0,24,88v32a16,16,0,0,0,16,16v64a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V136a16,16,0,0,0,16-16V88A16,16,0,0,0,216,72ZM149,36.51a13.69,13.69,0,0,1,10-4.5h.49A16.62,16.62,0,0,1,176,49.08a13.69,13.69,0,0,1-4.5,10c-9.49,8.4-25.24,11.36-35,12.4C137.7,60.89,141,45.5,149,36.51Zm-64.09.36A16.63,16.63,0,0,1,96.59,32h.49a13.69,13.69,0,0,1,10,4.5c8.39,9.48,11.35,25.2,12.39,34.92-9.73-1-25.48-4-35-12.4A13.7,13.7,0,0,1,84.91,36.87ZM40,88H108v32H40Zm16,48H108v64H56Zm144,64H148V136h52Zm16-80H148V88h68Z"></path>
+                </svg>
+              </div>
+              <div class="flex flex-col gap-0.5">
+                <p class="text-[17px] font-bold leading-tight">Beneficio 3</p>
+                <p class="text-sm font-normal leading-normal text-[#4e7097]">Recibirás 300 puntos al completar esta actividad.</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <p class="text-sm font-normal leading-normal text-[#4e7097]">300 Puntos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="border-t border-[#e7edf3] bg-[#4CAF50] text-sm leading-normal">
+      <div class="flex items-center justify-between flex-wrap-reverse gap-3 px-10 py-3">
+        <div class="flex items-center gap-3">
+          <span>&copy; 2024 Puntos Estilo. Todos los derechos reservados.</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

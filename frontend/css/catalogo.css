@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("../img/fondo.png");
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header div {
+  margin-top: 10px;
+}
+
+header span {
+  margin-right: 20px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.NovedadesSection {
+  padding: 20px;
+  width: 100%; /* Asegura que la sección ocupe todo el ancho disponible */
+}
+
+.mainDestacados {
+  text-align: center;
+}
+
+.containerProdutos {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los productos se envuelvan a la siguiente línea */
+  gap: 20px; /* Espacio entre los productos */
+  justify-content: center; /* Centra los productos horizontalmente */
+  margin-top: 20px;
+}
+
+.producto {
+  background-color: #ffffff; /* Fondo de cada producto */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  overflow: hidden; /* Para asegurar que los bordes redondeados se mantengan */
+  width: 250px; /* Ancho fijo de cada producto */
+  flex: 1 1 calc(25% - 20px); /* Flexibilidad para ajustar el tamaño */
+  box-sizing: border-box; /* Incluye el padding y el borde en el tamaño del elemento */
+}
+
+.producto__img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.productDescription {
+  margin-top: 10px;
+}
+
+.producto__title {
+  font-size: 1.2rem; /* Tamaño del título */
+  margin-bottom: 5px;
+}
+
+.producto__price {
+  font-weight: bold;
+  color: #4CAF50; /* Color del precio */
+}
+
+.producto__icon {
+  font-size: 24px; /* Tamaño del ícono */
+  color: #4CAF50; /* Color del ícono */
+  margin-top: 10px;
+  display: block; /* Hace que el ícono esté en línea */
+  transition: transform 0.3s ease; /* Efecto de transición al hacer hover */
+}
+
+.producto__icon:hover {
+  transform: scale(1.2); /* Escala el ícono al hacer hover */
+}
+
+/* Footer */
+.footer-section {
+  width: 100%;
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  justify-items: auto;
+}

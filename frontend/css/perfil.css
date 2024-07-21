@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("../img/fondo.png");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header div {
+  margin-top: 10px;
+}
+
+header span {
+  margin-right: 20px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #fff;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar-header {
+  margin-bottom: 20px;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.sidebar-header .points {
+  font-weight: bold;
+  color: orange;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.main-content {
+  width: 100%;
+  padding: 20px;
+}
+
+.status-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 48%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: green;
+}
+
+.card p {
+  margin: 10px 0 0;
+  color: #333;
+}
+
+.benefits {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.benefits h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.benefits-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.benefit-card {
+  width: 23%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 10px 0;
+}
+
+.benefit-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.benefit-card .points {
+  font-weight: bold;
+  color: orange;
+}
+
+  /* Footer */
+  .footer-section {
+    width: 100%;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    justify-items: auto;
+  }

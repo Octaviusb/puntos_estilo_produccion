@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Datos Personales</title>
+    <link rel="stylesheet" href="css/datos.css">
+</head>
+<body>
+    <header>
+        <img src="img/logoPe.jpg" alt="logotipo" width="100" id="logo">
+        <h1>Puntos Estilo</h1>
+        <div>
+            <span id="usuario-span"></span>
+            <a href="#" id="logout-link">Cerrar Sesión</a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <form id="edit-personal-data-form">
+            <h2>Mis Datos Personales</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+            
+            <label for="identificacion">Identificación:</label>
+            <input type="text" id="identificacion" name="identificacion" required>
+            
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+            
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+            
+            <label for="celular">Celular:</label>
+            <input type="tel" id="celular" name="celular" required>
+            
+            <label for="cargo">Cargo:</label>
+            <input type="text" id="cargo" name="cargo" required>
+            
+            <label for="fotografia">Fotografía:</label>
+            <input type="file" id="fotografia" name="fotografia" accept="image/*">
+
+            <p>No tiene Cuenta?</p> <a href="registro.html">Registrarse</a>
+            
+            <button type="submit">Guardar Cambios</button>
+        </form>
+    </div>
+
+    <footer class="footer-section">
+        <h2>Información de Contacto</h2>
+        <ol>
+            <li>Dirección: Calle Falsa 123</li>
+            <li>Teléfono: 555-555-555</li>
+            <li>Email: contacto@example.com</li>
+        </ol>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (localStorage.getItem('isLoggedIn') !== 'true') {
+                alert('Por favor inicie sesión primero');
+                window.location.href = 'login.html';
+                return;
+            }
+
+            const storedData = JSON.parse(localStorage.getItem('userData'));
+
+            if (storedData) {
+                document.getElementById('nombre').value = storedData.nombre;
+                document.getElementById('apellidos').value = storedData.apellidos;
+                document.getElementById('identificacion').value = storedData.identificacion;
+                document.getElementById('correo').value = storedData.correo;
+                document.getElementById('direccion').value = storedData.direccion;
+                document.getElementById('celular').value = storedData.celular;
+                document.getElementById('cargo').value = storedData.cargo;
+                
+                document.getElementById('usuario-span').textContent = 'Usuario: ' + storedData.nombre;
+            }
+
+            document.getElementById('logout-link').addEventListener('click', function() {
+                localStorage.setItem('isLoggedIn', 'false');
+                window.location.href = 'login.html';
+            });
+        });
+    
+        document.getElementById('edit-personal-data-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const formData = {
+                nombre: document.getElementById('nombre').value,
+                apellidos: document.getElementById('apellidos').value,
+                identificacion: document.getElementById('identificacion').value,
+                correo: document.getElementById('correo').value,
+                direccion: document.getElementById('direccion').value,
+                celular: document.getElementById('celular').value,
+                cargo: document.getElementById('cargo').value,
+                fotografia: document.getElementById('fotografia').files[0] ? document.getElementById('fotografia').files[0].name : ''
+            };
+    
+            localStorage.setItem('userData', JSON.stringify(formData));
+            alert('Datos personales actualizados correctamente');
+        });
+    </script>
+</body>
+</html>    
