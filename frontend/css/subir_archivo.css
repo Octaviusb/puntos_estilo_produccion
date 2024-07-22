@@ -37,8 +37,13 @@ header a {
 }
 
 .formulario{
-    width: 100%;
-    background-color: #fff;
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    box-shadow: darkgray;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
   /* Footer */
