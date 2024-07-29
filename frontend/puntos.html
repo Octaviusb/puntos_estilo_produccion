@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900">
   <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-</head>
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 <body>
   <div class="relative flex flex-col min-h-screen bg-slate-50 overflow-x-hidden" style="font-family: Inter, 'Noto Sans', sans-serif;">
     <div class="layout-container flex flex-col h-full grow">
@@ -98,6 +98,20 @@
         </div>
       </div>
     </div>
+    <div>
+      <!-- Div de puntos de recompensa -->
+      <div class="layout-content-container">
+        <h3>Saldo Actual: <span id="saldo"></span></h3>
+        
+        <!-- Añadir elementos interactivos para los puntos de recompensa -->
+        <div class="puntos-recompensa">
+          <h4>Puntos: <span id="puntos">0</span></h4>
+          <div class="puntos-item" data-puntos="10">10 Puntos</div>
+          <div class="puntos-item" data-puntos="20">20 Puntos</div>
+          <div class="puntos-item" data-puntos="30">30 Puntos</div>
+        </div>
+    </div>
+
     <footer class="border-t border-[#e7edf3] bg-[#4CAF50] text-sm leading-normal">
       <div class="flex items-center justify-between flex-wrap-reverse gap-3 px-10 py-3">
         <div class="flex items-center gap-3">
@@ -106,5 +120,56 @@
       </div>
     </footer>
   </div>
+  <script>
+    // Funciones para interactuar con el backend
+    async function obtenerSaldo() {
+      const response = await fetch('/api/saldo');
+      const data = await response.json();
+      document.getElementById('saldo').innerText = data.saldo;
+    }
+
+    async function enviarDinero(monto) {
+      const response = await fetch('/api/transaccion', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ monto })
+      });
+      const data = await response.json();
+      if (data.success) {
+        obtenerSaldo();
+        obtenerHistorial();
+      } else {
+        alert('Error en la transacción');
+      }
+    }
+
+    async function obtenerHistorial() {
+      const response = await fetch('/api/historial');
+      const data = await response.json();
+      const historial = document.getElementById('historialTransacciones');
+      historial.innerHTML = '';
+      data.transacciones.forEach(transaccion => {
+        const li = document.createElement('li');
+        li.innerText = `${transaccion.fecha}: ${transaccion.monto}`;
+        historial.appendChild(li);
+      });
+    }
+
+    document.getElementById('transaccionForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const monto = document.getElementById('monto').value;
+      enviarDinero(monto);
+    });
+
+    function logout() {
+      // Implementar lógica de cierre de sesión
+    }
+
+    // Inicializar datos al cargar la página
+    obtenerSaldo();
+    obtenerHistorial();
+  </script>
 </body>
 </html>

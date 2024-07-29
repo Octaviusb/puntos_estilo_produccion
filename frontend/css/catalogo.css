@@ -109,6 +109,20 @@ nav ul li a {
   transform: scale(1.2); /* Escala el ícono al hacer hover */
 }
 
+.canje-button{
+  display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+}
+
 /* Footer */
 .footer-section {
   width: 100%;

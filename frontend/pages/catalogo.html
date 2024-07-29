@@ -37,7 +37,7 @@
                             <span class="produto__price">$89900</span>
                             <p>+ 500 puntos</p>
                         </div>
-                        <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
+                        <button class="canje-button" data-points="500">Canjear</button>
                     </div>
                     <div class="producto">
                         <img src="../img/reloj_dama.jpg" alt="" class="produto__img">
@@ -46,7 +46,7 @@
                             <span class="produto__price">$89900</span>
                             <p>+ 500 puntos</p>
                         </div>
-                        <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
+                        <button class="canje-button" data-points="500">Canjear</button>
                     </div>
                     <div class="producto">
                         <img src="../img/cel.jpg" alt="" class="produto__img">
@@ -55,7 +55,7 @@
                             <span class="produto__price">$389900</span>
                             <p>+ 1500 puntos</p>
                         </div>
-                        <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
+                        <button class="canje-button" data-points="1500">Canjear</button>
                     </div>
                     <div class="producto">
                         <img src="../img/phone.jpg" alt="" class="produto__img">
@@ -64,7 +64,7 @@
                             <span class="produto__price">$2289900</span>
                             <p>+ 5000 puntos</p>
                         </div>
-                        <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
+                        <button class="canje-button" data-points="5000">Canjear</button>
                     </div>
                     <div class="producto">
                         <img src="../img/phone1.jpg" alt="" class="produto__img">
@@ -73,7 +73,7 @@
                             <span class="produto__price">$3289900</span>
                             <p>+ 5000 puntos</p>
                         </div>
-                        <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
+                        <button class="canje-button" data-points="5000">Canjear</button>
                     </div>
                     <div class="producto">
                         <img src="../img/cine_colombia.jpg" alt="" class="produto__img">
@@ -82,7 +82,7 @@
                             <span class="produto__price">$9900</span>
                             <p>+ 1000 puntos</p>
                         </div>
-                        <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
+                        <button class="canje-button" data-points="1000">Canjear</button>
                     </div>
                     <div class="producto">
                         <img src="../img/viajes.jpg" alt="" class="produto__img" width="250">
@@ -91,7 +91,7 @@
                             <span class="produto__price">$1199900</span>
                             <p>+ 4500 puntos</p>
                         </div>
-                        <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
+                        <button class="canje-button" data-points="4500">Canjear</button>
                     </div>
                     <div class="producto">
                         <img src="../img/recreacion.jpg" alt="" class="produto__img" width="250">
@@ -100,12 +100,33 @@
                             <span class="produto__price">$199900</span>
                             <p>+ 500 puntos</p>
                         </div>
-                        <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
+                        <button class="canje-button" data-points="500">Canjear</button>
                     </div>
                 </section>
+
+                <!-- Añadir elementos interactivos para los puntos de recompensa 
+                <div class="puntos-recompensa">
+                    <h4>Puntos: <span id="puntos">0</span></h4>
+                    <div class="puntos-item" data-puntos="10">10 Puntos</div>
+                    <div class="puntos-item" data-puntos="20">20 Puntos</div>
+                    <div class="puntos-item" data-puntos="30">30 Puntos</div>
+                </div>-->
             </main>
         </section>
     </main>
+
+    <div>
+        <!-- Formulario para canjear productos -->
+        <form id="canjeForm">
+            <select id="productos" required>
+            <option value="">Selecciona un producto</option>
+            <option value="1" data-puntos="100">Producto 1 - 100 puntos</option>
+            <option value="2" data-puntos="200">Producto 2 - 200 puntos</option>
+            <option value="3" data-puntos="300">Producto 3 - 300 puntos</option>
+            </select>
+            <button type="submit">Canjear</button>
+        </form>
+    </div>
 
     <footer class="footer-section">
         <h2>Información de Contacto</h2>

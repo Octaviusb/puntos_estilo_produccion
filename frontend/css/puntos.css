@@ -1,0 +1,127 @@
+/* General styles */
+body {
+  font-family: 'Inter', 'Noto Sans', sans-serif;
+  background-color: #F8FAFC;
+  color: #0e141b;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  background-color: #4CAF50;
+  border-bottom: 1px solid #e7edf3;
+}
+
+header img {
+  width: 100px;
+}
+
+header h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+header a {
+  font-size: 0.875rem;
+  font-weight: medium;
+  color: #0e141b;
+  text-decoration: none;
+  margin-right: 1.5rem;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-content-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.layout-content-container h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.layout-content-container .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.layout-content-container .text-center {
+  text-align: center;
+}
+
+.layout-content-container .p-4 {
+  padding: 1rem;
+}
+
+.layout-content-container .gap-2 {
+  gap: 0.5rem;
+}
+
+.layout-content-container .min-w-72 {
+  min-width: 18rem;
+}
+
+.layout-content-container .p-3 {
+  padding: 0.75rem;
+}
+
+.layout-content-container .border {
+  border: 1px solid #d0dbe7;
+}
+
+.layout-content-container .rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.layout-content-container .text-2xl {
+  font-size: 1.5rem;
+}
+
+.layout-content-container .text-sm {
+  font-size: 0.875rem;
+}
+
+.layout-content-container .text-lg {
+  font-size: 1.125rem;
+}
+
+.layout-content-container .font-bold {
+  font-weight: bold;
+}
+
+.layout-content-container .font-normal {
+  font-weight: normal;
+}
+
+/* Footer */
+.footer-section {
+  width: 100%;
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 20px 0;
+  text-align: left;
+  justify-items: auto;
+}
