@@ -1,0 +1,37 @@
+# Archivos de desarrollo y temporales
+*.log
+*.tmp
+*.bak
+*~
+.DS_Store
+Thumbs.db
+
+# Carpetas pesadas innecesarias
+ffmpeg/
+marketing/video-production/
+backup_*.zip
+deploy_puntos_estilo/
+
+# Archivos de desarrollo
+*test*.php
+*debug*.php
+*temp*.php
+diagnostico_*.php
+corregir_*.php
+reorganizar_*.php
+preparar_*.php
+verificar_instalacion.php
+ejecutar_sql.php
+
+# Documentación de desarrollo
+CORRECCIONES_*.md
+RESUMEN_*.md
+SOLUCION_*.md
+estructura.txt
+
+# Archivos de configuración local
+server/config.php
+
+# Logs
+logs/
+*.log

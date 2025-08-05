@@ -1,0 +1,106 @@
+# 🎬 Comandos FFmpeg para Optimización de Videos - Puntos Estilo
+
+# Compresión de videos (calidad alta)
+ffmpeg -i input.mp4 -c:v libx264 -crf 23 -preset medium -c:a aac -b:a 128k output.mp4
+
+# Crear versión para web (720p)
+ffmpeg -i input.mp4 -vf scale=1280:720 -c:v libx264 -crf 25 -preset fast -c:a aac -b:a 96k web_version.mp4
+
+# Crear versión para móvil (vertical)
+ffmpeg -i input.mp4 -vf scale=720:1280 -c:v libx264 -crf 28 -preset fast -c:a aac -b:a 64k mobile_version.mp4
+
+# Extraer audio del video
+ffmpeg -i input.mp4 -vn -acodec copy audio.aac
+
+# Crear GIF animado (para redes sociales)
+ffmpeg -i input.mp4 -vf "fps=10,scale=480:-1" -loop 0 output.gif
+
+# Agregar marca de agua (logo)
+ffmpeg -i input.mp4 -i logo.png -filter_complex "overlay=10:10" output_with_logo.mp4
+
+# Crear thumbnail (captura de pantalla)
+ffmpeg -i input.mp4 -ss 00:00:05 -vframes 1 thumbnail.jpg
+
+# Recortar video (de 00:30 a 02:30)
+ffmpeg -i input.mp4 -ss 00:00:30 -t 00:02:00 -c copy trimmed.mp4
+
+# Cambiar velocidad del video (2x más rápido)
+ffmpeg -i input.mp4 -filter:v "setpts=0.5*PTS" -filter:a "atempo=2.0" fast.mp4
+
+# Agregar subtítulos
+ffmpeg -i input.mp4 -vf subtitles=subtitles.srt output_with_subs.mp4
+
+# Crear versión para Instagram (cuadrado)
+ffmpeg -i input.mp4 -vf "scale=1080:1080:force_original_aspect_ratio=decrease,pad=1080:1080:(ow-iw)/2:(oh-ih)/2" instagram.mp4
+
+# Optimizar para YouTube
+ffmpeg -i input.mp4 -c:v libx264 -crf 18 -preset slow -c:a aac -b:a 192k youtube_optimized.mp4
+
+# Crear versión para LinkedIn (horizontal)
+ffmpeg -i input.mp4 -vf scale=1920:1080 -c:v libx264 -crf 23 -preset medium linkedin.mp4
+
+# Agregar música de fondo (mezclar audio)
+ffmpeg -i input.mp4 -i background_music.mp3 -filter_complex "[0:a][1:a]amix=inputs=2:duration=first:weights=0.7:0.3" output_with_music.mp4
+
+# Crear versión silenciosa (solo video)
+ffmpeg -i input.mp4 -an -c:v copy silent.mp4
+
+# Convertir a formato web optimizado
+ffmpeg -i input.mp4 -c:v libx264 -crf 23 -preset medium -c:a aac -b:a 128k -movflags +faststart web_optimized.mp4
+
+# Crear versión para email (tamaño reducido)
+ffmpeg -i input.mp4 -vf scale=640:360 -c:v libx264 -crf 28 -preset fast -c:a aac -b:a 64k email_version.mp4
+
+# Agregar fade in/out
+ffmpeg -i input.mp4 -vf "fade=t=in:st=0:d=2,fade=t=out:st=8:d=2" fade_effect.mp4
+
+# Crear versión para TikTok (vertical 9:16)
+ffmpeg -i input.mp4 -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2" tiktok.mp4
+
+# Optimizar para Facebook
+ffmpeg -i input.mp4 -c:v libx264 -crf 23 -preset medium -c:a aac -b:a 128k -movflags +faststart facebook.mp4
+
+# Crear versión para Twitter
+ffmpeg -i input.mp4 -vf scale=1280:720 -c:v libx264 -crf 25 -preset fast -c:a aac -b:a 96k twitter.mp4
+
+# Agregar logo animado (aparición gradual)
+ffmpeg -i input.mp4 -i logo.png -filter_complex "[1:v]fade=t=in:st=0:d=2:alpha=1[v1];[0:v][v1]overlay=10:10" logo_animated.mp4
+
+# Crear versión para presentaciones
+ffmpeg -i input.mp4 -vf scale=1920:1080 -c:v libx264 -crf 20 -preset slow presentation.mp4
+
+# Optimizar para streaming
+ffmpeg -i input.mp4 -c:v libx264 -crf 23 -preset medium -c:a aac -b:a 128k -g 30 -keyint_min 30 streaming.mp4
+
+# Crear versión para WhatsApp
+ffmpeg -i input.mp4 -vf scale=480:640 -c:v libx264 -crf 28 -preset fast -c:a aac -b:a 64k whatsapp.mp4
+
+# Agregar texto sobre video
+ffmpeg -i input.mp4 -vf "drawtext=text='Puntos Estilo':fontcolor=white:fontsize=24:x=10:y=10" text_overlay.mp4
+
+# Crear versión para LinkedIn Stories
+ffmpeg -i input.mp4 -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2" linkedin_stories.mp4
+
+# Optimizar para Instagram Reels
+ffmpeg -i input.mp4 -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2" instagram_reels.mp4
+
+# Crear versión para YouTube Shorts
+ffmpeg -i input.mp4 -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2" youtube_shorts.mp4
+
+---
+# 📋 Instrucciones de Uso:
+# 1. Reemplaza "input.mp4" con el nombre de tu archivo
+# 2. Ajusta los parámetros según tus necesidades
+# 3. Ejecuta en terminal/cmd
+# 4. Verifica la calidad del resultado
+
+# 🎯 Formatos Recomendados:
+# - YouTube: 1920x1080, CRF 18-23
+# - Instagram: 1080x1080 o 1080x1920
+# - LinkedIn: 1920x1080, CRF 23
+# - Web: 1280x720, CRF 25
+# - Móvil: 720x1280, CRF 28
+
+---
+*Comandos creados: $(Get-Date)*
+*Responsable: Equipo Puntos Estilo* 

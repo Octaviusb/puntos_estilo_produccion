@@ -1,0 +1,156 @@
+/* Estilos modernos y profesionales para la página de perfil */
+:root {
+    --primary-color: #1a237e;
+    --secondary-color: #3949ab;
+    --accent-color: #ffb300;
+    --text-color: #222;
+    --light-bg: #f4f6fb;
+    --card-bg: #fff;
+    --border-color: #e0e0e0;
+    --shadow: 0 4px 16px rgba(26,35,126,0.08);
+    --radius: 14px;
+    --transition: 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--light-bg);
+    color: var(--text-color);
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.profile-container h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.profile-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.profile-pic-section {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-color);
+    box-shadow: 0 2px 8px rgba(255,179,0,0.08);
+    margin-bottom: 1rem;
+}
+
+.upload-button {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--accent-color), #ffe082);
+    color: var(--primary-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition);
+}
+
+.upload-button:hover {
+    background: var(--primary-color);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.personal-details {
+    flex: 2;
+    min-width: 300px;
+}
+
+.personal-details p {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.personal-details strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Estilos para secciones de puntos y beneficios */
+h1 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem 0;
+    font-weight: 700;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: var(--card-bg);
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition);
+}
+
+ul li:hover {
+    transform: translateY(-4px);
+}
+
+/* Estilos para el catálogo de beneficios */
+#searchInput {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: 1rem;
+}
+
+.filter {
+    margin-right: 1rem;
+}
+
+#benefitList li {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition);
+}
+
+#benefitList li:hover {
+    transform: translateY(-4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .personal-details {
+        text-align: center;
+    }
+} 

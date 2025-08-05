@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo de Productos</title>
+    <link rel="stylesheet" href="../css/catalogo.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img src="../img/logoPe.jpg" alt="logotipo" width="100" id="logo">
+        <h1>Puntos Estilo</h1>
+        <div>
+            <?php if (isset($_SESSION['user']) && $_SESSION['user'] !== null): ?>
+                <span>Usuario: <?php echo htmlspecialchars($_SESSION['user']['nombre']); ?></span>
+                <a href="logout.php">Cerrar Sesión</a>
+            <?php endif; ?>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <section class="NovedadesSection">
+        <main class="mainDestacados">
+            <h2>NOVEDADES</h2>
+            <section class="containerProdutos">
+                <div class="producto">
+                    <img src="../img/reloj.webp" alt="" class="produto__img" width="220">
+                    <div class="productDescription">
+                        <h3 class="produto__title">Reloj Hombre</h3>
+                        <span class="produto__price">$89900</span>
+                    </div>
+                    <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
+                </div>
+                <div class="producto">
+                    <img src="../img/reloj_dama.jpg" alt="" class="produto__img">
+                    <div class="productDescription">
+                        <h3 class="produto__title">Reloj Dama</h3>
+                        <span class="produto__price">$89900</span>
+                    </div>
+                    <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
+                </div>
+                <div class="producto">
+                    <img src="../img/cel.jpg" alt="" class="produto__img">
+                    <div class="productDescription">
+                        <h3 class="produto__title">Celular</h3>
+                        <span class="produto__price">$389900</span>
+                    </div>
+                    <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
+                </div>
+                <div class="producto">
+                    <img src="../img/phone.jpg" alt="" class="produto__img">
+                    <div class="productDescription">
+                        <h3 class="produto__title">Iphone</h3>
+                        <span class="produto__price">$2289900</span>
+                    </div>
+                    <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
+                </div>
+                <div class="producto">
+                    <img src="../img/phone1.jpg" alt="" class="produto__img">
+                    <div class="productDescription">
+                        <h3 class="produto__title">Iphone 15</h3>
+                        <span class="produto__price">$3289900</span>
+                    </div>
+                    <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
+                </div>
+                <div class="producto">
+                    <img src="../img/cine_colombia.jpg" alt="" class="produto__img">
+                    <div class="productDescription">
+                        <h3 class="produto__title">Entradas Cine</h3>
+                        <span class="produto__price">$9900</span>
+                    </div>
+                    <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
+                </div>
+                <div class="producto">
+                    <img src="../img/viajes.jpg" alt="" class="produto__img" width="250">
+                    <div class="productDescription">
+                        <h3 class="produto__title">Viajes</h3>
+                        <span class="produto__price">$1199900</span>
+                    </div>
+                    <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
+                </div>
+                <div class="producto">
+                    <img src="../img/recreacion.jpg" alt="" class="produto__img" width="250">
+                    <div class="productDescription">
+                        <h3 class="produto__title">Recreación</h3>
+                        <span class="produto__price">$199900</span>
+                    </div>
+                    <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
+                </div>
+            </div>
+
+            </div>
+
+                
+                <!-- Repite este bloque para cada producto -->
+            </section>
+        </main>
+    </section>
+</body>
+</html>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Tienda Online</p>
+    </footer>
+
+    <script src="js/catalogo.js"></script>
+</body>
+</html>
